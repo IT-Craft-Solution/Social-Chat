@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/igStoryPhoto"
+        android:layout_width="@dimen/_130mdp"
+        android:layout_height="@dimen/_85mdp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.9"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="10dip" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/black_shade"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/igStoryPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/igStoryPhoto"
+        app:layout_constraintStart_toStartOf="@+id/igStoryPhoto"
+        app:layout_constraintTop_toTopOf="@+id/igStoryPhoto" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/igStoryDp"
+        android:layout_width="@dimen/_25mdp"
+        android:layout_height="@dimen/_25mdp"
+        android:layout_marginStart="4dp"
+        android:elevation="@dimen/_40mdp"
+
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/igStoryPhoto" />
+
+
+    <ImageView
+        android:id="@+id/igStoryLike"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:src="@drawable/ic_like"
+        app:layout_constraintEnd_toEndOf="@+id/igStoryPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txStoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:text="Darshil Bhuva"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/igStoryPhoto"
+        app:layout_constraintStart_toEndOf="@+id/igStoryDp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
