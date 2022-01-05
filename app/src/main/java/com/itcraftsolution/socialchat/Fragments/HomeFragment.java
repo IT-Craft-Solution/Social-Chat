@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.itcraftsolution.socialchat.Adapter.HomePostRecyclerAdapter;
 import com.itcraftsolution.socialchat.Adapter.HomeStoryRecyclerView;
+import com.itcraftsolution.socialchat.Model.Post;
 import com.itcraftsolution.socialchat.Model.Story;
 import com.itcraftsolution.socialchat.R;
 import com.itcraftsolution.socialchat.databinding.FragmentHomeBinding;
@@ -26,6 +28,7 @@ public class HomeFragment extends Fragment {
 
    FragmentHomeBinding binding;
     ArrayList<Story> stories;
+    ArrayList<Post> posts;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +37,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(getLayoutInflater());
 
         stories = new ArrayList<>();
+        posts = new ArrayList<>();
 
         stories.add(new Story(R.drawable.deaf , R.drawable.profile , R.drawable.ic_like , "MR.Shadow"));
         stories.add(new Story(R.drawable.deaf , R.drawable.profile , R.drawable.ic_like_red , "Rumit kakadiya"));
@@ -46,6 +50,22 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext() , RecyclerView.HORIZONTAL , false);
         binding.rvHomeStory.setLayoutManager(linearLayoutManager);
         binding.rvHomeStory.setNestedScrollingEnabled(false);
+
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+        posts.add(new Post(R.drawable.profile , R.drawable.logo , R.drawable.ic_bookmark , "IT Craft Solution" ,"It Company" ,"200" , "3", "50"  ));
+
+        HomePostRecyclerAdapter Postadapter = new HomePostRecyclerAdapter(getContext() , posts);
+        binding.rvHomePost.setAdapter(Postadapter);
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
+        binding.rvHomePost.setLayoutManager(linearLayoutManager1);
+
+
         return binding.getRoot();
     }
 }

@@ -16,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -32,7 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txProfileName"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/_16mdp"
@@ -56,106 +55,116 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toBottomOf="@+id/txProfileName" />
 
             <HorizontalScrollView
                 android:id="@+id/horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
                 android:fillViewport="true"
                 android:isScrollContainer="false"
                 android:scrollbars="none"
-                android:layout_marginTop="@dimen/_16mdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/igAddStory"
-                    android:layout_width="@dimen/_130mdp"
-                    android:layout_height="@dimen/_85mdp"
-                    android:layout_marginStart="16dp"
-                    android:alpha="0.9"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/deaf"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:riv_corner_radius="10dip" />
-
-                <View
-                    android:id="@+id/view4"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@drawable/black_shade"
-                    app:layout_constraintBottom_toBottomOf="@+id/igAddStory"
-                    app:layout_constraintEnd_toEndOf="@+id/igAddStory"
-                    app:layout_constraintStart_toStartOf="@+id/igAddStory"
-                    app:layout_constraintTop_toTopOf="@+id/igAddStory" />
-
-                <View
-                    android:id="@+id/view8"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/circle"
-                    android:backgroundTint="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@+id/igAddPlus"
-                    app:layout_constraintEnd_toEndOf="@+id/igAddPlus"
-                    app:layout_constraintStart_toStartOf="@+id/igAddPlus"
-                    app:layout_constraintTop_toTopOf="@+id/igAddPlus" />
-
-                <ImageView
-                    android:id="@+id/igAddPlus"
-                    android:layout_width="@dimen/_30mdp"
-                    android:layout_height="@dimen/_30mdp"
-                    android:src="@drawable/ic_plus"
-                    app:layout_constraintBottom_toBottomOf="@+id/igAddStory"
-                    app:layout_constraintEnd_toEndOf="@+id/igAddStory"
-                    app:layout_constraintStart_toStartOf="@+id/igAddStory"
-                    app:layout_constraintTop_toTopOf="@+id/igAddStory"
-                    app:layout_constraintVertical_bias="0.3" />
-
-                <TextView
-                    android:id="@+id/textView11"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/baloo"
-                    android:text="Create a story"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="@+id/igAddPlus"
-                    app:layout_constraintStart_toStartOf="@+id/igAddPlus"
-                    app:layout_constraintTop_toBottomOf="@+id/igAddPlus" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-             <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvHomeStory"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/igAddStory"
+                            android:layout_width="@dimen/_130mdp"
+                            android:layout_height="@dimen/_85mdp"
+                            android:layout_marginStart="16dp"
+                            android:alpha="0.9"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/deaf"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:riv_corner_radius="10dip" />
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/black_shade"
+                            app:layout_constraintBottom_toBottomOf="@+id/igAddStory"
+                            app:layout_constraintEnd_toEndOf="@+id/igAddStory"
+                            app:layout_constraintStart_toStartOf="@+id/igAddStory"
+                            app:layout_constraintTop_toTopOf="@+id/igAddStory" />
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/igAddPlus"
+                            app:layout_constraintEnd_toEndOf="@+id/igAddPlus"
+                            app:layout_constraintStart_toStartOf="@+id/igAddPlus"
+                            app:layout_constraintTop_toTopOf="@+id/igAddPlus" />
+
+                        <ImageView
+                            android:id="@+id/igAddPlus"
+                            android:layout_width="@dimen/_30mdp"
+                            android:layout_height="@dimen/_30mdp"
+                            android:src="@drawable/ic_plus"
+                            app:layout_constraintBottom_toBottomOf="@+id/igAddStory"
+                            app:layout_constraintEnd_toEndOf="@+id/igAddStory"
+                            app:layout_constraintStart_toStartOf="@+id/igAddStory"
+                            app:layout_constraintTop_toTopOf="@+id/igAddStory"
+                            app:layout_constraintVertical_bias="0.3" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:text="Create a story"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="@+id/igAddPlus"
+                            app:layout_constraintStart_toStartOf="@+id/igAddPlus"
+                            app:layout_constraintTop_toBottomOf="@+id/igAddPlus" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHomeStory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="16dp"
-                        android:layout_weight="1"
-                        >
+                        android:layout_weight="1">
 
                     </androidx.recyclerview.widget.RecyclerView>
 
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:layout_marginEnd="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_16mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

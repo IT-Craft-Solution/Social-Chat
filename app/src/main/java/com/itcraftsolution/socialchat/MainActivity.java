@@ -1,9 +1,9 @@
 package com.itcraftsolution.socialchat;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.os.Bundle;
 
 import com.iammert.library.readablebottombar.ReadableBottomBar;
 import com.itcraftsolution.socialchat.Fragments.AddPostFragment;
@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         fragmentTransaction.replace(R.id.frMainContainer, new HomeFragment());
                         break;
-
                 }
                 fragmentTransaction.commit();
             }

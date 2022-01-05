@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10mdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/igPostDp"
+        android:layout_width="@dimen/_48mdp"
+        android:layout_height="@dimen/_48mdp"
+        android:padding="@dimen/_4mdp"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txPostName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:fontFamily="serif"
+        android:text="Alicia Addams"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/igPostDp"
+        app:layout_constraintStart_toEndOf="@+id/igPostDp"
+        app:layout_constraintTop_toTopOf="@+id/igPostDp"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <TextView
+        android:id="@+id/txPostBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Traveler, life Lover"
+        app:layout_constraintStart_toStartOf="@+id/txPostName"
+        app:layout_constraintTop_toBottomOf="@+id/txPostName" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/_18mdp"
+        android:layout_height="@dimen/_18mdp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/igPostDp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/igPostDp"
+        app:srcCompat="@drawable/ic_more" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/igPostImage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_200mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:alpha="0.9"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/igPostDp"
+        app:layout_constraintTop_toBottomOf="@+id/igPostDp"
+        app:riv_corner_radius="8dip" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/black_shade"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/igPostImage"
+        app:layout_constraintEnd_toEndOf="@+id/igPostImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/igPostImage" />
+
+    <ImageView
+        android:id="@+id/igPostSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txPostShare"
+        app:srcCompat="@drawable/ic_bookmark" />
+
+    <TextView
+        android:id="@+id/txPostLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:drawableLeft="@drawable/ic_like_red"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center"
+        android:text="24"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/igPostImage"
+        app:layout_constraintTop_toBottomOf="@+id/igPostImage" />
+
+    <TextView
+        android:id="@+id/txPostComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:drawableLeft="@drawable/ic_chat"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center"
+        android:text="57"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txPostLike"
+        app:layout_constraintStart_toEndOf="@+id/txPostLike"
+        app:layout_constraintTop_toTopOf="@+id/txPostLike" />
+
+    <TextView
+        android:id="@+id/txPostShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:drawableLeft="@drawable/ic_share"
+        android:drawablePadding="@dimen/_6mdp"
+        android:gravity="center"
+        android:text="33"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txPostComment"
+        app:layout_constraintStart_toEndOf="@+id/txPostComment"
+        app:layout_constraintTop_toTopOf="@+id/txPostComment" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1mdp"
+        android:background="#417C7B7B"
+        android:layout_marginTop="@dimen/_16mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/igPostSave" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

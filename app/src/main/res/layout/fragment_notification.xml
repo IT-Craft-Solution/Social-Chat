@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".Fragments.NotificationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/Notification" />
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:text="@string/Notification"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24mdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbNotificationTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/grey"
+        android:elevation="8dp"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginEnd="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_8mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/teal_600"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/black" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpNotification"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tbNotificationTabLayout"
+        app:layout_constraintStart_toStartOf="@+id/tbNotificationTabLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tbNotificationTabLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
